@@ -11,10 +11,10 @@ describe("Message class", function() {
     });
     // test 5
     test ('constructor sets name', function() {
-        expect( new Message(!'') === true).toBe(false);
+        expect(new Message('name')).toEqual({"name": "name", "commands": undefined});
     });
     // test 6
     test ('contains a commands array passed into the constructor as the 2nd argument', function() {
-        expect(new Message("name",!'') === true).toBe(false);
+        expect(new Message('name',['commands'])).toEqual({"name": "name", "commands": ["commands"]});
     });
 });

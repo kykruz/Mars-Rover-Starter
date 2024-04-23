@@ -10,10 +10,10 @@ describe("Command class", function() {
   });
 // test 2
   test ("constructor sets command type" , function() {
-    expect(new Command(!'') === true).toBe(false);
+    expect(new Command('commandType')).toEqual({"commandType": "commandType", "value": undefined});
   });
   // test 3
   test ("constructor sets a value passed in as the 2nd argument" , function() {
-    expect(new Command("commandType",!'') === true).toBe(false);
+    expect(new Command('commandType', 'value')).toEqual({"commandType": "commandType", "value": "value"});
   });
 });
